@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "user",
+    "collectionId": "34f76c5f-0ad2-4767-9aa2-3e5de26b0a08",
+    "dateExported": "2024-04-25T16:55:14.129Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "47c13805-03eb-493a-88e3-54c6c896fb06",
+            "colId": "34f76c5f-0ad2-4767-9aa2-3e5de26b0a08",
+            "containerId": "",
+            "name": "http://localhost:3010/api/user",
+            "url": "http://localhost:3010/api/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-25T16:52:17.850Z",
+            "modified": "2024-04-25T16:52:17.850Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"NOMBRE\" : \"BECERRA\",\n  \"APELLIDO\" : \"LOPEZ\",\n  \"TELEFONO\" : 31232313,\n  \"ID\" : 1\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "vF_6edAsMZM5kvB2VUl6D6EBufKhAXsupUu_i_g-XfdvTxk-IzbMRaPa3FmSN7gBOg7DDpJ8rt-BpEVQS4WQbA"
+}
