@@ -1,4 +1,5 @@
-import { success } from "../message/msj.js";
+import { success, error } from "../message/msj.js";
+import { dbPool } from "../config/db.mysql.js";
 
 export const createUser = (req,res) => {
     const datos = req.body; //para traer los datos que estan en la peticion.body
@@ -7,8 +8,17 @@ export const createUser = (req,res) => {
     success(req, res, 201, "post Ha ingresado un dato");
 };
 
-export const showUser = (req, res) => {
-    success(req, res, 200, "conectado con usuario");
+export const showUser = async(req, res) => {
+
+    try {
+        const respuesta = await dbPool.query("CALL SP_MOSTAR_USUARIO(1);");
+        console.log(respuesta);
+        success(req, res, 200, respuesta[0]); //[0] para que solo traiga el primer elemento sin el stuf que
+        
+    } catch (err) {
+        error(req, res, 500, err)
+        
+    }
 };
 
 export const changeUser = (req, res) => {

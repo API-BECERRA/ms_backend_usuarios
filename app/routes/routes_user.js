@@ -3,7 +3,7 @@ import { changeUser, createUser, deleteUser, showUser } from "../controllers/con
 
 const rutaUser = Router();
 
-rutaUser.get ("/user", showUser);
+rutaUser.get ("/user", showUser);   
 
 // POST para guardar o crear, debe ir la ruta y el nombre del controlador
 rutaUser.post("/user", createUser);

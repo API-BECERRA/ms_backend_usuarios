@@ -11,6 +11,13 @@ export const success = (req, res, status = 500, mensaje = "") => {
             body:mensaje
         })
 };
+export const error = (req, res, status = 500, mensaje = "") => {
+    res.status(status).json({
+            error:true,
+            status:status,
+            body:mensaje
+        })
+};
 
 // tabla de errores 
 // const codigoHTTP = () => {
