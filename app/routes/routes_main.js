@@ -36,4 +36,4 @@ rutaMain.get("/contact", (req, res) => {
     })
 });
 
-export default rutaMain
+export default rutaMain;

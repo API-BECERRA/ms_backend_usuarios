@@ -1,18 +1,17 @@
 import { Router } from "express";
-import {success} from "../message/msj.js"
+import { changeUser, createUser, deleteUser, showUser } from "../controllers/controllers.user.js";
 
 const rutaUser = Router();
 
-rutaUser.get ("/user", (req,res) => {
-    success(req, res, 200, "conectado con usuario");
-});
+rutaUser.get ("/user", showUser);
 
-// POST para guardar o crear
-rutaUser.post("/user", (req,res) => {
-    const datos = req.body; //para traer los datos que estan en la peticion.body
-    console.log(datos);
-    //res.(datos.APELLIDO) intentar mostar solo el apellido en la respuesta del body de thunder client
-    success(req, res, 200, "post Ha ingresado un dato");
-})
+// POST para guardar o crear, debe ir la ruta y el nombre del controlador
+rutaUser.post("/user", createUser);
+
+// para modificar 
+rutaUser.put("/user",changeUser);
+
+// para borrar 
+rutaUser.delete("/user",deleteUser);
 
 export default rutaUser;
