@@ -1,0 +1,18 @@
+import jwt from "jsonwebtoken";
+import { config } from "dotenv";
+import { error } from "../message/msj.js";
+
+config();
+
+export const verifyToken = async(req, res, next) => {
+
+    const token = req.headers["x-access-token"];
+
+    try {
+        const validar = await jwt.verify(token, process.env.TOKEN_PRIVATEKEY);
+        next();
+    } catch (err) {
+        error(req, res, 401, err)
+        
+    }
+}
