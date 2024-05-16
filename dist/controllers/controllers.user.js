@@ -195,7 +195,7 @@ var logueoUser = exports.logueoUser = /*#__PURE__*/function () {
           return _dbMysql.dbPool.query("CALL SP_BUSCAR_USUARIO('".concat(usuario, "')"));
         case 4:
           respuesta = _context6.sent;
-          console.log(respuesta[0][0][0].CLAVE);
+          console.log(respuesta[0]);
           if (!(respuesta[0][0] == 0)) {
             _context6.next = 9;
             break;
