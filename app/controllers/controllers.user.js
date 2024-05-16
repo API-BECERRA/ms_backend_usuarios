@@ -78,7 +78,7 @@ export const changeUser = async(req, res) => {
 };
 
 export const deleteUser = async(req, res) => {
-    const id = req.body.ID;
+    const id = req.body.id;
 
     try {
         const respuesta = await dbPool.query(`CALL SP_ELIMINAR_USUARIO('${id}')`);

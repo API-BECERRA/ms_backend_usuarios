@@ -12,10 +12,10 @@ rutaUser.get ("/user", listarUsuario);
 rutaUser.post("/user", verifyToken ,createUser);
 
 // para modificar 
-rutaUser.put("/user",verifyToken,changeUser);
+rutaUser.put("/user", verifyToken, changeUser);
 
 // para borrar 
-rutaUser.delete("/user",verifyToken,deleteUser);
+rutaUser.delete("/user", verifyToken ,deleteUser);
 
 // para loguearse
 rutaUser.post("/login", logueoUser);

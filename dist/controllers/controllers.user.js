@@ -155,7 +155,7 @@ var deleteUser = exports.deleteUser = /*#__PURE__*/function () {
     return _regenerator["default"].wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
-          id = req.body.ID;
+          id = req.body.id;
           _context5.prev = 1;
           _context5.next = 4;
           return _dbMysql.dbPool.query("CALL SP_ELIMINAR_USUARIO('".concat(id, "')"));

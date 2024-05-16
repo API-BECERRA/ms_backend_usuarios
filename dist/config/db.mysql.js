@@ -14,11 +14,3 @@ var dbPool = exports.dbPool = (0, _promise.createPool)({
   password: process.env.MYSQLPASSWORD,
   database: process.env.MYSQLDATABASE
 });
-
-// export const dbPool = createPool({
-//     host: "localhost",
-//     port: 3306,
-//     user: "root",
-//     password: "",
-//     database: "ejercicio"
-// });
