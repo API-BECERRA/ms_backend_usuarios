@@ -47,8 +47,8 @@ export const showUser = async(req, res) => {
 export const listarUsuario = async(req, res) => {
     try {
         const respuesta = await dbPool.query(`CALL SP_MOSRTAR_TODOS_USUARIOS();`);
-        console.log(respuesta);
-        success(req, res, 200, respuesta[0]); //[0] para que solo traiga el primer elemento sin el stuf que
+        // console.log(respuesta);
+        success(req, res, 200, respuesta[0][0]); //[0] para que solo traiga el primer elemento sin el stuf que
         
     } catch (err) {
         error(req, res, 500, err)
