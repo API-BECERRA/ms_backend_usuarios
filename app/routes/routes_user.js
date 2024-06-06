@@ -9,7 +9,7 @@ rutaUser.get ("/user/:id", showUser);
 rutaUser.get ("/user", listarUsuario);   
 
 // POST para guardar o crear, debe ir la ruta y el nombre del controlador
-rutaUser.post("/user", verifyToken ,createUser);
+rutaUser.post("/user",createUser);
 
 // para modificar 
 rutaUser.put("/user", verifyToken, changeUser);

@@ -1,13 +1,12 @@
 {
   "name": "ejercicio1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "swagger-dev" : "node ./app/tool/swagger.js",
+    "swagger-dev": "node ./app/tool/swagger.js",
     "dev": "nodemon app/index.js --exec babel-node",
     "build": "babel app --out-dir dist",
-    "swagger" : "node ./dist/tool/swagger.js",
+    "swagger": "node ./dist/tool/swagger.js",
     "start": "node dist/index.js"
   },
   "author": "Angie",
@@ -15,9 +14,11 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "colors": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
     "mysql2": "^3.9.7",
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.0"
@@ -29,5 +30,7 @@
     "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-env": "^7.24.5",
     "nodemon": "^3.1.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }

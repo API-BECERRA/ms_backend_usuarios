@@ -15,9 +15,9 @@ export const createUser = async(req,res) => {
     try {
         //para cifrar la clave, el segundo parametro es una logitud, que es un numerito que uno quiera 
         const hash = await bcrypt.hash(claveSincifrar, 2);
-        const clave = hash;
+        const contra = hash;
 
-        const respuesta = await dbPool.query(`CALL 	SP_CREAR_USUARIO('${nombre}', '${usuario}', '${clave}')`);
+        const respuesta = await dbPool.query(`CALL 	SP_CREAR_USUARIO('${nombre}', '${usuario}', '${contra}')`);
         if(respuesta[0].affectedRows == 1) {
             success(req, res, 201, "Usuario creado");
 
@@ -98,9 +98,9 @@ export const logueoUser = async(req, res) => {
     // otras maneras de inicializacion de las variables
     const {usuario, clave} = req.body;
 
-    
+    console.log(req.body);
     try {
-        const respuesta = await dbPool.query(`CALL SP_BUSCAR_USUARIO('${usuario}')`);
+        const respuesta = await dbPool.query(`CALL SP_LOGUEAR_USER('${usuario}')`);
 
         console.log(respuesta[0][0][0].CLAVE);
 

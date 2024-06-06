@@ -6,7 +6,7 @@ export const user = {"DOCTOR" : {"CARGO":"DOCTOR", "NAME" : "Jaime londoño", "E
 
 export const success = (req, res, status = 500, mensaje = "") => {
     res.status(status).json({
-            error:true,
+            error:false,
             status:status,
             body:mensaje
         })

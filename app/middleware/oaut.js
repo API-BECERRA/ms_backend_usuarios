@@ -9,7 +9,7 @@ export const verifyToken = async(req, res, next) => {
     const token = req.headers["x-access-token"];
 
     try {
-        const validar = await jwt.verify(token, process.env.TOKEN_PRIVATEKEY);
+        const validar =  jwt.verify(token, process.env.TOKEN_PRIVATEKEY);
         next();
     } catch (err) {
         error(req, res, 401, err)
