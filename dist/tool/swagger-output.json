@@ -82,7 +82,11 @@
         "description": "",
         "parameters": [
           {
+<<<<<<< HEAD
             "name": "apply(this",
+=======
+            "name": "x-access-token",
+>>>>>>> 6179bc3ce0c1bb97b9673282f7aa07cb0adf32a7
             "in": "header",
             "type": "string"
           },
@@ -115,7 +119,11 @@
         "description": "",
         "parameters": [
           {
+<<<<<<< HEAD
             "name": "apply(this",
+=======
+            "name": "x-access-token",
+>>>>>>> 6179bc3ce0c1bb97b9673282f7aa07cb0adf32a7
             "in": "header",
             "type": "string"
           },
@@ -146,11 +154,61 @@
             "description": ""
           }
         }
+<<<<<<< HEAD
+=======
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+>>>>>>> 6179bc3ce0c1bb97b9673282f7aa07cb0adf32a7
       }
     },
     "/login": {
       "post": {
         "description": "",
+<<<<<<< HEAD
+=======
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "usuario": {
+                  "example": "any"
+                },
+                "clave": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+>>>>>>> 6179bc3ce0c1bb97b9673282f7aa07cb0adf32a7
         "responses": {
           "default": {
             "description": ""

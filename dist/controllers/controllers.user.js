@@ -94,19 +94,19 @@ var listarUsuario = exports.listarUsuario = /*#__PURE__*/function () {
           return _dbMysql.dbPool.query("CALL SP_MOSRTAR_TODOS_USUARIOS();");
         case 3:
           respuesta = _context3.sent;
-          console.log(respuesta);
-          (0, _msj.success)(req, res, 200, respuesta[0]); //[0] para que solo traiga el primer elemento sin el stuf que
-          _context3.next = 11;
+          // console.log(respuesta);
+          (0, _msj.success)(req, res, 200, respuesta[0][0]); //[0] para que solo traiga el primer elemento sin el stuf que
+          _context3.next = 10;
           break;
-        case 8:
-          _context3.prev = 8;
+        case 7:
+          _context3.prev = 7;
           _context3.t0 = _context3["catch"](0);
           (0, _msj.error)(req, res, 500, _context3.t0);
-        case 11:
+        case 10:
         case "end":
           return _context3.stop();
       }
-    }, _callee3, null, [[0, 8]]);
+    }, _callee3, null, [[0, 7]]);
   }));
   return function listarUsuario(_x5, _x6) {
     return _ref3.apply(this, arguments);
